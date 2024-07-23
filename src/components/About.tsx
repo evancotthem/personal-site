@@ -1,4 +1,8 @@
-export default function About(theme: string) {
+interface AboutProps {
+  theme: string;
+}
+
+export default function About({ theme }: AboutProps) {
   return (
     <main className={theme}>
       <section>

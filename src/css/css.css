@@ -1,3 +1,7 @@
+a {
+  padding: 2px;
+}
+
 /* Pacific Northwest */
 body.pnw {
   font-family: "Trebuchet MS", "Helvetica", sans-serif;
@@ -50,9 +54,7 @@ footer.pnw {
   color: #f0f8ff;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position: relative;
 }
 
 /* Adding a subtle tree-like pattern to the background */
@@ -153,9 +155,7 @@ footer.nyc {
   color: #fff;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position: relative;
 }
 
 /* Steel beam inspired separators */

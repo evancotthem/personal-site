@@ -1,14 +1,37 @@
-import { Theme } from "../App";
+type Theme = {
+  name: string;
+  code: string;
+};
+
+const THEMES = new Array<Theme>(
+  ...[
+    {
+      name: "Raw HTML",
+      code: "raw",
+    },
+    {
+      name: "Pacific Northwest",
+      code: "pnw",
+    },
+    {
+      name: "New York City",
+      code: "nyc",
+    },
+    {
+      name: "Cyberpunk",
+      code: "cyberpunk",
+    },
+  ]
+);
 
 interface ThemeNavProps {
-  themes: Array<Theme>;
   onClick: (theme: string) => void;
 }
 
-export default function ThemeNav({ themes, onClick }: ThemeNavProps) {
+export default function ThemeNav({ onClick }: ThemeNavProps) {
   return (
     <>
-      {themes.map((theme: Theme) => {
+      {THEMES.map((theme: Theme) => {
         return (
           <button
             onClick={() => {
