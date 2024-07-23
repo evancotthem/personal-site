@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ThemeNav from "./components/ThemeNav";
+import About from "./components/About";
+import Resume from "./components/Resume";
 import "./css/css.css";
 
 export type Theme = {
@@ -29,7 +31,7 @@ const THEMES = new Array<Theme>(
   ]
 );
 
-function Home() {
+export default function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "raw");
 
   function handleThemeClick(theme: string) {
@@ -41,18 +43,17 @@ function Home() {
     <Router>
       <body className={theme}>
         <ThemeNav themes={THEMES} onClick={handleThemeClick} />
-        <header>
+        <header className={theme}>
           <h1>Evan Van Cotthem - {theme}</h1>
           <nav>
             <Link to="/">Home</Link>
             <Link to="/resume">Resume</Link>
-            <Link to="/blog">Blog</Link>
           </nav>
         </header>
-        <main>
+        <main className={theme}>
           <section>
-            <h1>About</h1>
-            <p>
+            <h1 className={theme}>About</h1>
+            <p className={theme}>
               I'm a dedicated Software Engineer currently working in frontend
               development with React, Typescript, and GraphQL. My journey in the
               software industry began as a Software Test Engineer focused on
@@ -67,7 +68,11 @@ function Home() {
             </p>
           </section>
         </main>
-        <footer>
+        <Routes>
+          <Route path="/" element={<About theme={theme} />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+        <footer className={theme}>
           <Link to="https://www.linkedin.com/in/evancotthem">LinkedIn</Link>
           <Link to="https://github.com/evancotthem">GitHub</Link>
           <Link to="https://twitter.com/evancotthem">Twitter</Link>
@@ -76,5 +81,3 @@ function Home() {
     </Router>
   );
 }
-
-export default Home;

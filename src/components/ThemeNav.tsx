@@ -1,4 +1,4 @@
-import { Theme } from "../Home";
+import { Theme } from "../App";
 
 interface ThemeNavProps {
   themes: Array<Theme>;
@@ -15,6 +15,7 @@ export default function ThemeNav({ themes, onClick }: ThemeNavProps) {
               onClick(theme.code);
             }}
             className={theme.code}
+            key={theme.code}
           >
             {theme.name}
           </button>
