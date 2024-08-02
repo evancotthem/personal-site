@@ -2,62 +2,107 @@ a {
   padding: 2px;
 }
 
+button {
+  margin: 5px;
+}
+
+.theme-nav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 100;
+}
+
+header {
+  padding-top: 20px;
+}
+
 /* Pacific Northwest */
-body.pnw {
-  font-family: "Trebuchet MS", "Helvetica", sans-serif;
-  background-color: #e8f3e8; /* Light green background to represent the lush environment */
-  color: #2c3e50; /* Dark blue-gray for text, reminiscent of deep waters */
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+.theme-nav.pnw {
+  border-bottom: 2px solid #002200;
+}
+
+button.pnw {
+  background-color: #085d05;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.pnw:hover {
+  background-color: #121cc0;
 }
 
 header.pnw {
-  background-color: #3d5a80; /* Deep blue for header, like Puget Sound */
-  color: #f0f8ff; /* Light blue text */
-  padding: 20px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+  padding: 20px;
+}
+
+header.pnw::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  background: radial-gradient(
+    circle at center,
+    rgba(232, 243, 232, 1) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  z-index: -1;
+  pointer-events: none;
 }
 
 h1.pnw,
-h2.pnw,
-h3.pnw {
-  color: #2e8b57; /* Sea green for headings, representing evergreen trees */
+h2.pnw {
+  color: #085d05;
+  text-align: center;
+}
+
+h3.pnw,
+h4.pnw {
+  color: #002200;
+}
+
+nav.pnw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+header.pnw a.pnw {
+  font-size: 1.2rem;
 }
 
 a.pnw {
-  color: #4682b4; /* Steel blue for links, like mountain lakes */
+  color: #121cc0;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 a.pnw:hover {
-  text-decoration: underline;
+  color: #002200;
 }
 
-main.pnw {
+a.pnw:hover {
+  color: #002200;
+}
+
+body.pnw {
+  margin-top: 50px;
   padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Slightly transparent white, like misty mountains */
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer.pnw {
-  background-color: #2c3e50; /* Dark blue-gray footer */
-  color: #f0f8ff;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-}
-
-/* Adding a subtle tree-like pattern to the background */
 body.pnw::before {
   content: "";
   position: fixed;
@@ -70,133 +115,115 @@ body.pnw::before {
       rgba(232, 243, 232, 0.8),
       rgba(232, 243, 232, 0.8)
     ),
-    url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0 L100 100 L0 100 Z" fill="%232e8b57" fill-opacity="0.1"/></svg>');
-  background-size: cover, 100px 100px;
+    url("../public/tree.png");
+  background-position: 0 50px;
+  background-size: cover, 100px 189px;
 }
 
-/* Style for buttons, inspired by river rocks */
-button.pnw {
-  background-color: #708090; /* Slate gray */
+main.pnw {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding-bottom: 250px;
+  border: 2px solid #002200;
+  color: #002200;
+  background-color: white;
+  position: relative;
+  background-image: url("../public/mountain1.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main.pnw::before,
+main.pnw::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 58px;
+  background-image: url("../public/pinecone.png");
+  background-size: contain;
+  top: 5px;
+}
+
+main.pnw::before {
+  left: 10px;
+}
+
+main.pnw::after {
+  right: 10px;
+}
+
+section.pnw {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+footer.pnw {
+  text-align: center;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-top: 2px solid #002200;
+  width: 100%;
+  background-color: white;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links.pnw {
+  display: flex;
+  gap: 1rem;
+}
+
+.attribution.pnw {
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+}
+
+p.pnw {
+  text-align: left;
+}
+
+ul.pnw {
+  text-align: left;
+}
+
+/* New York City */
+.theme-nav.nyc {
+  border-bottom: 2px solid black;
+}
+
+button.nyc {
+  background-color: brown;
   color: white;
   border: none;
   padding: 10px 20px;
   margin: 5px;
-  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button.pnw:hover {
-  background-color: #4682b4; /* Steel blue on hover */
-}
-
-/* Add a mountain-like shape to the top of the page */
-body.pnw::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background-image: linear-gradient(transparent 50%, #e8f3e8 50%),
-    linear-gradient(135deg, #3d5a80 25%, transparent 25%) 0 50%,
-    linear-gradient(225deg, #3d5a80 25%, transparent 25%) 0 50%;
-  background-size: 50px 100px;
-  background-repeat: repeat-x;
-  z-index: -1;
-}
-
-/* New York City */
-body.nyc {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #f0f0f0; /* Light gray background */
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+button.nyc:hover {
+  background-color: black;
 }
 
 header.nyc {
-  background-color: #fff;
-  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
   padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h1.nyc,
-h2.nyc,
-h3.nyc {
-  color: #333;
-  font-weight: 300; /* Light font weight for elegance */
-  letter-spacing: 1px;
+body.nyc {
+  margin-top: 50px;
+  padding: 20px;
 }
 
-a.nyc {
-  color: #0066cc; /* Subtle blue for links */
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-a.nyc:hover {
-  color: #004080;
-}
-
-main.nyc {
-  padding: 40px;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-}
-
-footer.nyc {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-}
-
-/* Steel beam inspired separators */
-hr.nyc {
-  border: none;
-  height: 1px;
-  background-color: #ddd;
-  margin: 30px 0;
-  position: relative;
-}
-
-hr.nyc::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: 0;
-  right: 0;
-  height: 7px;
-  background-image: linear-gradient(to right, #ddd 50%, transparent 50%);
-  background-size: 20px 7px;
-}
-
-/* Minimalist buttons inspired by modern architecture */
-button.nyc {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-button.nyc:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-/* Subtle grid background reminiscent of city blocks */
 body.nyc::before {
   content: "";
   position: fixed;
@@ -205,46 +232,59 @@ body.nyc::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: linear-gradient(to right, #e5e5e5 1px, transparent 1px),
-    linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.5;
+  background-image: linear-gradient(
+    to bottom,
+    skyblue 0%,
+    skyblue 20%,
+    black 20%,
+    black 21%,
+    white 21%,
+    white 21.1%,
+    black 21.1%,
+    black 21.2%,
+    white 21.2%,
+    white 21.3%,
+    black 21.3%,
+    black 22%,
+    white 22%,
+    white 22.1%,
+    black 22.1%,
+    black 30%,
+    #8b4513 30%,
+    #8b4513 80%,
+    #90ee90 80%,
+    #90ee90 100%
+  );
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
-/* Art gallery inspired image display */
-img.nyc {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+main.nyc {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  text-align: center;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
 }
 
-/* Typography inspired by museum placards */
-blockquote.nyc {
-  font-style: italic;
-  color: #666;
-  border-left: 3px solid #333;
-  padding-left: 20px;
-  margin-left: 0;
-}
-
-/* Minimalist navigation */
-nav.nyc ul {
-  list-style-type: none;
-  padding: 0;
+footer.nyc {
+  text-align: center;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-top: 2px solid black;
+  width: 100%;
+  background-color: white;
+  gap: 1rem;
   display: flex;
   justify-content: center;
-}
-
-nav.nyc ul.nyc li {
-  margin: 0 15px;
-}
-
-nav.nyc ul.nyc li.nyc a {
-  text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 1px;
+  align-items: center;
 }
 
 /* Cyberpunk */

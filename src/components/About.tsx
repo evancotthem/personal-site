@@ -6,7 +6,7 @@ export default function About({ theme }: AboutProps) {
   return (
     <main className={theme}>
       <section>
-        <h1 className={theme}>About</h1>
+        <h2 className={theme}>About</h2>
         <p className={theme}>
           I'm a dedicated Software Engineer currently working in frontend
           development with React, Typescript, and GraphQL. My journey in the

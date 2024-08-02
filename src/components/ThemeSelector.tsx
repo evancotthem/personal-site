@@ -24,26 +24,27 @@ const THEMES = new Array<Theme>(
   ]
 );
 
-interface ThemeNavProps {
+interface ThemeSelectorProps {
+  theme: string;
   onClick: (theme: string) => void;
 }
 
-export default function ThemeNav({ onClick }: ThemeNavProps) {
+export default function ThemeSelector({ theme, onClick }: ThemeSelectorProps) {
   return (
-    <>
-      {THEMES.map((theme: Theme) => {
+    <div className={`theme-nav ${theme}`}>
+      {THEMES.map((buttonTheme: Theme) => {
         return (
           <button
             onClick={() => {
-              onClick(theme.code);
+              onClick(buttonTheme.code);
             }}
-            className={theme.code}
-            key={theme.code}
+            className={buttonTheme.code}
+            key={buttonTheme.code}
           >
-            {theme.name}
+            {buttonTheme.name}
           </button>
         );
       })}
-    </>
+    </div>
   );
 }

@@ -19,7 +19,7 @@ interface HeaderProps {
 export default function Header({ theme }: HeaderProps) {
   return (
     <header className={theme}>
-      <h1>Evan Van Cotthem</h1>
+      <h1 className={theme}>Evan Van Cotthem</h1>
       <nav className={theme}>
         {NAV_ITEMS.map((navItem: NavItem) => {
           return (

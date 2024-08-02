@@ -1,11 +1,15 @@
-export default function Resume() {
+interface ResumeProps {
+  theme: string;
+}
+
+export default function Resume({ theme }: ResumeProps) {
   return (
-    <div>
-      <h1>Resume</h1>
-      <section id="experience">
-        <h2>Experience</h2>
-        <h4>Software Engineer, Indeed, 2022-2024</h4>
-        <ul>
+    <main className={theme}>
+      <h2 className={theme}>Resume</h2>
+      <section className={theme} id="experience">
+        <h3 className={theme}>Experience</h3>
+        <h4 className={theme}>Software Engineer, Indeed, 20222-2024</h4>
+        <ul className={theme}>
           <li>
             Created the onboarding workflow for linking third-party applicant
             tracking systems to Indeed enabling businesses to manage external
@@ -34,8 +38,8 @@ export default function Resume() {
             viability of the tools themselves at extreme loads
           </li>
         </ul>
-        <h4>Software Engineer, Qualtrics, 2018-2022</h4>
-        <ul>
+        <h4 className={theme}>Software Engineer, Qualtrics, 2018-2022</h4>
+        <ul className={theme}>
           <li>
             Designed, developed, and managed software tooling, microservice
             infrastructure, and a UI that enabled engineers to conduct
@@ -74,23 +78,23 @@ export default function Resume() {
           </li>
         </ul>
       </section>
-      <section id="skills">
-        <h2>Skills</h2>
-        <p>
+      <section className={theme} id="skills">
+        <h3 className={theme}>Skills</h3>
+        <ul className={theme}>
           <b>Languages:</b> Javascript, Typescript, Go, Java, Python
-        </p>
-        <p>
+        </ul>
+        <ul className={theme}>
           <b>Tech:</b> React, GraphQL, Docker, Jenkins, GitLab CI, TestCafe,
           Playwright, Selenium, AWS (S3, EC2, Lambda)
-        </p>
+        </ul>
       </section>
-      <section id="education">
-        <h2>Education</h2>
-        <h4>
+      <section className={theme} id="education">
+        <h3 className={theme}>Education</h3>
+        <ul className={theme}>
           BS Applied and Computational Mathemetical Sciences, University of
           Washington, 2018
-        </h4>
+        </ul>
       </section>
-    </div>
+    </main>
   );
 }

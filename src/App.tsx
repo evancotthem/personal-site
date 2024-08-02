@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ThemeNav from "./components/ThemeNav";
+import ThemeSelector from "./components/ThemeSelector";
 import Header from "./components/Header";
 import About from "./components/About";
 import Resume from "./components/Resume";
@@ -16,16 +16,18 @@ export default function App() {
   }
 
   return (
-    <body className={theme}>
-      <Router>
-        <ThemeNav onClick={handleThemeClick} />
-        <Header theme={theme} />
-        <Routes>
-          <Route path="/" element={<About theme={theme} />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
-        <Footer theme={theme} />
-      </Router>
-    </body>
+    <>
+      <ThemeSelector theme={theme} onClick={handleThemeClick} />
+      <body className={theme}>
+        <Router>
+          <Header theme={theme} />
+          <Routes>
+            <Route path="/" element={<About theme={theme} />} />
+            <Route path="/resume" element={<Resume theme={theme} />} />
+          </Routes>
+          <Footer theme={theme} />
+        </Router>
+      </body>
+    </>
   );
 }

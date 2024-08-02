@@ -19,7 +19,7 @@ const SOCIALS = new Array<Social>(
 
 export default function Footer({ theme }: FooterProps) {
   return (
-    <footer className={theme}>
+    <footer className={`footer-container ${theme}`}>
       {SOCIALS.map((social: Social) => {
         return (
           <Link className={theme} to={social.to} key={social.to}>
@@ -27,6 +27,14 @@ export default function Footer({ theme }: FooterProps) {
           </Link>
         );
       })}
+      {theme === "pnw" && (
+        <a
+          className={`${theme} attribution`}
+          href="https://www.vecteezy.com/free-png/pine-tree"
+        >
+          Images by Vecteezy
+        </a>
+      )}
     </footer>
   );
 }
