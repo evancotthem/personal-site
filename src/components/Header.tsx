@@ -28,13 +28,14 @@ export default function Header({ theme }: HeaderProps) {
               <Link className={theme} to={navItem.to} key={navItem.to}>
                 {navItem.name}
               </Link>
-              {navItem != NAV_ITEMS[NAV_ITEMS.length - 1] && (
-                <img
-                  src="../public/pinecone.png"
-                  height="40px"
-                  alt="pinecone"
-                />
-              )}
+              {theme === "pnw" &&
+                navItem != NAV_ITEMS[NAV_ITEMS.length - 1] && (
+                  <img
+                    src="../public/pinecone.png"
+                    height="40px"
+                    alt="pinecone"
+                  />
+                )}
             </>
           );
         })}
