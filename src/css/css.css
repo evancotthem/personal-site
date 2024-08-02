@@ -49,7 +49,7 @@ header.pnw {
 header.pnw::before {
   content: "";
   position: absolute;
-  top: -50px;
+  top: -100px;
   left: -50px;
   right: -50px;
   bottom: -50px;
@@ -77,8 +77,22 @@ nav.pnw {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
+
+/*
+nav.pnw a.pnw:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  margin-left: 2rem;
+  background-image: url("../public/pinecone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+*/
 
 header.pnw a.pnw {
   font-size: 1.2rem;
@@ -121,7 +135,8 @@ body.pnw::before {
 }
 
 main.pnw {
-  padding: 20px;
+  padding: 30px;
+  padding-top: 10px;
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -130,19 +145,35 @@ main.pnw {
   color: #002200;
   background-color: white;
   position: relative;
-  background-image: url("../public/mountain1.png");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("../public/mountain1.png");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
+main.pnw h2 {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #002200;
+  width: 20%;
+  margin: 10px auto;
+}
+
+/*
 main.pnw::before,
 main.pnw::after {
   content: "";
   position: absolute;
-  width: 35px;
+  width: 38px;
   height: 58px;
-  background-image: url("../public/pinecone.png");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../public/pinecone.png");
   background-size: contain;
   top: 5px;
 }
@@ -154,11 +185,13 @@ main.pnw::before {
 main.pnw::after {
   right: 10px;
 }
+*/
 
 section.pnw {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 footer.pnw {
   text-align: center;
   margin-top: 20px;
@@ -173,6 +206,19 @@ footer.pnw {
   justify-content: center;
   align-items: center;
 }
+
+/*
+footer.pnw::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url("../public/mountain1.png");
+  background-position: bottom center;
+  background-size: contain;
+}
+*/
 
 .social-links.pnw {
   display: flex;

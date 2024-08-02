@@ -6,6 +6,7 @@ import About from "./components/About";
 import Resume from "./components/Resume";
 import Footer from "./components/Footer";
 import "./css/css.css";
+// import Projects from "./components/Projects";
 
 export default function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "raw");
@@ -24,6 +25,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<About theme={theme} />} />
             <Route path="/resume" element={<Resume theme={theme} />} />
+            {/* <Route path="/projects" element={<Projects theme={theme} />} /> */}
           </Routes>
           <Footer theme={theme} />
         </Router>

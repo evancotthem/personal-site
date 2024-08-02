@@ -5,7 +5,7 @@ interface AboutProps {
 export default function About({ theme }: AboutProps) {
   return (
     <main className={theme}>
-      <section>
+      <section className={theme}>
         <h2 className={theme}>About</h2>
         <p className={theme}>
           I'm a dedicated Software Engineer currently working in frontend
