@@ -1,8 +1,6 @@
-interface AboutProps {
-  theme: string;
-}
+import { DefaultProps } from "../App";
 
-export default function About({ theme }: AboutProps) {
+export default function About({ theme }: DefaultProps) {
   return (
     <main className={theme}>
       <section className={theme}>

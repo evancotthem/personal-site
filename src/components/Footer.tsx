@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-
-interface FooterProps {
-  theme: string;
-}
+import { DefaultProps } from "../App";
 
 type Social = {
   name: string;
@@ -17,7 +14,7 @@ const SOCIALS = new Array<Social>(
   ]
 );
 
-export default function Footer({ theme }: FooterProps) {
+export default function Footer({ theme }: DefaultProps) {
   return (
     <footer className={`footer-container ${theme}`}>
       {SOCIALS.map((social: Social) => {

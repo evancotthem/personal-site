@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { DefaultProps } from "../App";
 
 type NavItem = {
   name: string;
@@ -13,11 +14,7 @@ const NAV_ITEMS = new Array<NavItem>(
   ]
 );
 
-interface HeaderProps {
-  theme: string;
-}
-
-export default function Header({ theme }: HeaderProps) {
+export default function Header({ theme }: DefaultProps) {
   return (
     <header className={theme}>
       <h1 className={theme}>Evan Van Cotthem</h1>

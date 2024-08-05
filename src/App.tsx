@@ -8,6 +8,10 @@ import Footer from "./components/Footer";
 import "./css/css.css";
 // import Projects from "./components/Projects";
 
+export interface DefaultProps {
+  theme: string;
+}
+
 export default function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "raw");
 

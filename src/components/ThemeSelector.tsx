@@ -1,3 +1,5 @@
+import { DefaultProps } from "../App";
+
 type Theme = {
   name: string;
   code: string;
@@ -24,8 +26,7 @@ const THEMES = new Array<Theme>(
   ]
 );
 
-interface ThemeSelectorProps {
-  theme: string;
+interface ThemeSelectorProps extends DefaultProps {
   onClick: (theme: string) => void;
 }
 

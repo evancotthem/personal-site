@@ -1,8 +1,6 @@
-interface ProjectProps {
-  theme: string;
-}
+import { DefaultProps } from "../App";
 
-export default function Projects({ theme }: ProjectProps) {
+export default function Projects({ theme }: DefaultProps) {
   return (
     <main className={theme}>
       <section className={theme}>

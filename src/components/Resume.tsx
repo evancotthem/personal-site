@@ -1,8 +1,6 @@
-interface ResumeProps {
-  theme: string;
-}
+import { DefaultProps } from "../App";
 
-export default function Resume({ theme }: ResumeProps) {
+export default function Resume({ theme }: DefaultProps) {
   return (
     <main className={theme}>
       <h2 className={theme}>Resume</h2>
