@@ -8,25 +8,26 @@ import Footer from "./components/Footer";
 import "./css/css.css";
 // import Projects from "./components/Projects";
 
+/*
 const FAVICONS: Record<string, string> = {
   raw: "",
   pnw: "/tree.png",
   // nyc: "/nyc.png",
 };
+*/
 
 export interface DefaultProps {
   theme: string;
 }
 
 export default function App() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "raw");
+  const [theme, setTheme] = useState(sessionStorage.getItem("theme") || "raw");
 
   function handleThemeClick(theme: string) {
-    localStorage.setItem("theme", theme);
-    document
-      .getElementById("favicon")
-      ?.setAttribute("href", `${FAVICONS[theme]}`);
-    console.log(document.getElementById("favicon"));
+    sessionStorage.setItem("theme", theme);
+    // document
+    //   .getElementById("favicon")
+    //   ?.setAttribute("href", `${FAVICONS[theme]}`);
     setTheme(theme);
   }
 
