@@ -6,7 +6,7 @@ export default function Resume({ theme }: DefaultProps) {
       <h2 className={theme}>Resume</h2>
       <section className={theme} id="experience">
         <h3 className={theme}>Experience</h3>
-        <h4 className={theme}>Software Engineer, Indeed, 20222-2024</h4>
+        <h4 className={theme}>Indeed: 20222-2024</h4>
         <ul className={theme}>
           <li>
             Created the onboarding workflow for linking third-party applicant
@@ -36,7 +36,7 @@ export default function Resume({ theme }: DefaultProps) {
             viability of the tools themselves at extreme loads
           </li>
         </ul>
-        <h4 className={theme}>Software Engineer, Qualtrics, 2018-2022</h4>
+        <h4 className={theme}>Qualtrics: 2018-2022</h4>
         <ul className={theme}>
           <li>
             Designed, developed, and managed software tooling, microservice

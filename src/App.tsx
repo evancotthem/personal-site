@@ -8,6 +8,12 @@ import Footer from "./components/Footer";
 import "./css/css.css";
 // import Projects from "./components/Projects";
 
+const FAVICONS: Record<string, string> = {
+  raw: "",
+  pnw: "./public/tree.png",
+  // nyc: "./public/nyc.png",
+};
+
 export interface DefaultProps {
   theme: string;
 }
@@ -17,6 +23,10 @@ export default function App() {
 
   function handleThemeClick(theme: string) {
     localStorage.setItem("theme", theme);
+    document
+      .getElementById("favicon")
+      ?.setAttribute("href", `${FAVICONS[theme]}`);
+    console.log(document.getElementById("favicon"));
     setTheme(theme);
   }
 

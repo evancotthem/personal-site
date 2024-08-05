@@ -18,8 +18,8 @@ export default function About({ theme }: DefaultProps) {
           learning new skills.
         </p>
         <p className={theme}>
-          Born and raised in the Seattle area, I currently live in New York
-          City.
+          I was born and raised in the Seattle area, but I currently live in New
+          York City.
         </p>
         <p className={theme}>
           Each of the buttons at the top are themes that represent a different

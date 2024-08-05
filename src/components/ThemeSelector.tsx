@@ -3,7 +3,6 @@ import { DefaultProps } from "../App";
 type Theme = {
   name: string;
   code: string;
-  description: string;
 };
 
 const THEMES = new Array<Theme>(
@@ -11,12 +10,10 @@ const THEMES = new Array<Theme>(
     {
       name: "Raw HTML",
       code: "raw",
-      description: "A theme for those who love the raw HTML.",
     },
     {
       name: "Pacific Northwest",
       code: "pnw",
-      description: "A theme for those who love the Pacific Northwest.",
     },
     /*{
       name: "New York City",
