@@ -24,7 +24,7 @@ export default function Footer({ theme }: DefaultProps) {
           </Link>
         );
       })}
-      {theme === "pnw" && (
+      {theme !== "raw" && (
         <a
           className={`${theme} attribution`}
           href="https://www.vecteezy.com/free-png/pine-tree"
