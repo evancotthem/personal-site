@@ -131,7 +131,7 @@ body.pnw::before {
     ),
     url("../public/tree.png");
   background-position: 0 50px;
-  background-size: cover, 100px 189px;
+  background-size: cover, 102px 189px;
 }
 
 main.pnw {

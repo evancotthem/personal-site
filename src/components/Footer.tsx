@@ -11,9 +11,9 @@ type Social = {
 
 const SOCIALS = new Array<Social>(
   ...[
+    { name: "Email", to: "mailto:evancotthem@gmail.com" },
     { name: "LinkedIn", to: "https://www.linkedin.com/in/evancotthem" },
     { name: "GitHub", to: "https://github.com/evancotthem" },
-    { name: "Twitter", to: "https://twitter.com/evancotthem" },
   ]
 );
 

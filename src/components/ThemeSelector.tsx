@@ -13,14 +13,14 @@ const THEMES = new Array<Theme>(
       name: "Pacific Northwest",
       code: "pnw",
     },
-    {
+    /*{
       name: "New York City",
       code: "nyc",
     },
     {
       name: "Cyberpunk",
       code: "cyberpunk",
-    },
+    },*/
   ]
 );
 
