@@ -10,8 +10,8 @@ import "./css/css.css";
 
 const FAVICONS: Record<string, string> = {
   raw: "",
-  pnw: "./public/tree.png",
-  // nyc: "./public/nyc.png",
+  pnw: "/tree.png",
+  // nyc: "/nyc.png",
 };
 
 export interface DefaultProps {

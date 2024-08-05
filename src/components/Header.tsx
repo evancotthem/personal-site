@@ -27,11 +27,7 @@ export default function Header({ theme }: DefaultProps) {
               </Link>
               {theme === "pnw" &&
                 navItem != NAV_ITEMS[NAV_ITEMS.length - 1] && (
-                  <img
-                    src="../public/pinecone.png"
-                    height="40px"
-                    alt="pinecone"
-                  />
+                  <img src="/pinecone.png" height="40px" alt="pinecone" />
                 )}
             </>
           );
