@@ -6,7 +6,25 @@ export default function Resume({ theme }: DefaultProps) {
       <h2 className={theme}>Resume</h2>
       <section className={theme} id="experience">
         <h3 className={theme}>Experience</h3>
-        <h4 className={theme}>Indeed: 20222-2024</h4>
+        <h4 className={theme}>Capital One: 2024-Present</h4>
+        <ul className={theme}>
+          <li>
+            Lead maintenance and optimization of mission-critical ACH transfer
+            systems processing millions of transfers daily across Capital One's
+            banking network
+          </li>
+          <li>
+            Develop real-time analytics tools enabling customer support and
+            fraud teams to detect and respond to ACH transfer failures and
+            anomalies
+          </li>
+          <li>
+            Mentor junior engineers through one-on-one sessions and knowledge
+            sharing initiatives, providing technical and career guidance while
+            promoting engineering best practices
+          </li>
+        </ul>
+        <h4 className={theme}>Indeed: 2022-2024</h4>
         <ul className={theme}>
           <li>
             Created the onboarding workflow for linking third-party applicant
@@ -79,11 +97,11 @@ export default function Resume({ theme }: DefaultProps) {
       <section className={theme} id="skills">
         <h3 className={theme}>Skills</h3>
         <ul className={theme}>
-          <b>Languages:</b> Javascript, Typescript, Go, Java, Python
+          <b>Languages:</b> Javascript, Typescript, Go, Java, SQL, GraphQL
         </ul>
         <ul className={theme}>
-          <b>Tech:</b> React, GraphQL, Docker, Jenkins, GitLab CI, TestCafe,
-          Playwright, Selenium, AWS (S3, EC2, Lambda)
+          <b>Tech:</b> React, Spring Boot, Docker, Jenkins, GitLab CI, Jest,
+          Testing Library, Playwright, AWS
         </ul>
       </section>
       <section className={theme} id="education">
